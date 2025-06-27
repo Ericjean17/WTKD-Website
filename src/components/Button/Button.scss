@@ -1,0 +1,26 @@
+:root {
+    --primary:#C77DFF;
+    --secondary: #E0AAFF;
+}
+
+* {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.btn--primary {
+    background-color: var(--primary);
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    color: #10002B;
+    padding: 14px 36px; // Increased padding for a bigger button
+    font-size: 1.25rem; // Larger text
+}
+
+.btn--primary:hover {
+    background: var(--secondary);
+    color: #242424;
+    transition: all 0.3s ease-out;
+}
