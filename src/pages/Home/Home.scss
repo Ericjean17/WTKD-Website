@@ -1,32 +1,127 @@
 .title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; // or center if you want vertical centering
-  text-align: center;
-  margin-top: 2rem auto; // adjust as needed to clear the navbar
-  height: 80vh;
-  width: 100%;
-  background-color: #0f0125;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; // or center if you want vertical centering
+    text-align: center;
+    margin: 0 auto; // adjust as needed to clear the navbar
+    height: 90vh;
+    width: 100%;
+    background-image: url('../../assets/wtkd-background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../../assets/wtkd-background.jpg');
+    background-position:center center;
+    background-size: cover;
+}
+
+p {
+    color: #FFFFFF;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: "Varela Round", sans-serif;
     font-weight: 700;
     font-style: normal;
     margin: 0;
-    color: #FFFFFF;
+    color: #eedbf8;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.875rem;
     font-family: "Varela Round", sans-serif;
     font-weight: 700;
     font-style: normal;
     margin-top: 1.2rem;
     margin-bottom: 3rem;
-    color: #FFFFFF;
+    color: #eedbf8;
 }
+
+h3 {
+    margin: 0 auto;
+    color: #eedbf8;
+}
+
+h4 {
+    margin: 1rem;
+}
+
+.upcoming-events {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #14062c;
+    padding: 6rem;
+    margin-bottom: 0;
+}
+
+.event-subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 2.5rem;
+}
+
+.no-events {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.event {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    margin: 2rem auto;
+    border: 2px solid #E0AAFF;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #14062c;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #fff;
+    p, span{
+        margin-left: 1rem;
+        font-weight: 400;
+    }
+
+    img {
+        width: 40%;
+        max-width: 15rem;
+        min-width: 8rem;
+        border-radius: 20px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+.event-content {
+    margin-right: 1rem;
+}
+
+.slider-container {
+    width: 60vw;
+}
+
+.slick-slide {
+  padding: 0 30px; // Equal horizontal gap
+  box-sizing: border-box;
+}
+
+.slick-list {
+  margin: 0 -16px; // Compensate for slide padding
+}
+
+.carousel-image {
+  width: 120%;
+  aspect-ratio: 4 / 3; // or 4 / 3, adjust as needed
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: block;
+  background: #222; // fallback background
+  max-height: 600px; // optional, for consistent height
+}
+
+
 
 
