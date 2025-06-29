@@ -4,15 +4,7 @@ import logo from "../../assets/wtkd-logo.jpg";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const [showNavbar, setShowNavbar] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const handleShowNavbar = () => setShowNavbar(!showNavbar);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const navLinks = [
     { name: "Home",
@@ -35,34 +27,30 @@ function Header() {
   ];
 
   return (
-    <nav className="navbar">
-      <div className='navbar-container'>
+    <>
+      <header className="primary-header">
         {/* Logo */}
-        <div className="navbar-logo" style={isMobile ? { margin: '0 auto' } : {}}>
+        <div>
           <Link to="/">
             <img className="logo" src={logo} alt="Logo" />
           </Link>
         </div>
-        {/* Desktop Navigation */}
-        {!isMobile && (
-          <div className="nav-elements">
-            <ul className={`nav-menu ${showNavbar && 'active'}`}>
-            {navLinks.map(link => (
-              <li key = {link.name} className='nav-item'>
-                <Link className='nav-link' to={link.path}>{link.name}</Link>
-              </li>
-            ))}
-            </ul>
-          </div>
-        )}
-        {/* Mobile Menu Button */}
-        {isMobile && (
-          <div className="menu-icon" onClick={handleShowNavbar} style={{ position: 'absolute', top: 0, right: 0 }}>
+        <nav>
+          {/* Desktop Navigation */}
+          <ul className="nav-menu">
+          {navLinks.map(link => (
+            <li key = {link.name} className='nav-item'>
+              <Link className='nav-link' to={link.path}>{link.name}</Link>
+            </li>
+          ))}
+          </ul>
+          {/* Mobile Menu Button */}
+          <div className="menu-icon">
             <i className='fas fa-bars'/>
           </div>
-        )}
-      </div>
-    </nav>
+        </nav>
+      </header>
+    </>
   );
 }
 

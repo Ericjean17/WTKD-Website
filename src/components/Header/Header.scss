@@ -1,40 +1,24 @@
 .logo {
     width: 6rem;
-    //padding
+    margin: 2rem;
 }
 
-.navbar-logo {
-    display: flex;
-    flex-shrink: 1;
-}
-
-.navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-    height: auto;
-    position: relative;
+.primary-header {
+    background-color: gray;
     width: 100%;
-    height: auto;
-}
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.3rem;
-  padding: 1.3rem;
-  width: 70vw;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
+.nav-menu {
+    display: flex;
+    list-style: none;
+    width: 35vw;
+}
 .menu-icon {
     display: none;
-}
-
-.nav-elements {
-    ul {
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-    }
 }
 
 .nav-link {

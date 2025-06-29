@@ -91,9 +91,9 @@ export default function Home() {
     return (
     <>
         <Header />
-        <Title title="Taekwondo Club" subtitle="at Western University"/>
+        {/* <Title title="Taekwondo Club" subtitle="at Western University"/>
         <Events />
-        <Footer />
+        <Footer /> */}
     </>
     )
 };
